@@ -1,0 +1,10 @@
+I2C Connections (PM 2.5 Sensor)
+QWIIC yellow line (SCK) - A5 (Arduino SCL)
+QWIIC blue line (SDI) - A4 (Arduino SDA)
+QWIIC black line - GND
+QWIIC red line - power (3.3V)
+
+LED Connections
+Arduino Pin 13 to 220 ohm resistor
+220 ohm resistor to LED
+LED to Arduino GND
