@@ -8,3 +8,5 @@ LED Connections
 Arduino Pin 13 to 220 ohm resistor
 220 ohm resistor to LED
 LED to Arduino GND
+
+see pm25_arduino_led.jpg for one implementation

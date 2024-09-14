@@ -14,4 +14,4 @@ Using an Arduino (or presumably other microcontroller tools),this turns on an LE
 [Using pm25_env per this forum thread ](https://forum.arduino.cc/t/abnormal-sensor-readings-from-a-pm2-5-sensor-by-plantower-solved/1277321/2)
 
 If you want to log data to a file, run the following python script (set up file name in script otherwise it uses airquality.log)
-python3 airQualityReadingsToSerialPort.py
+```python3 airQualityReadingsToSerialPort.py
