@@ -6,7 +6,8 @@
 5. [Analysis of using Plantower sensor in a lab](https://forums.adafruit.com/viewtopic.php?f=48&t=136528&p=767725#p767725)
 
 # What It Does 
-**(This is not intended to be used for any kind of production applications.)**
+**(This is not intended to be used for any kind of production applications, it's basically a toy that I'm using to learn about
+PM 2.5 monitoring and Arduino.)**
 
 Using an Arduino (or presumably other microcontroller tools),this turns on an LED light once a certain threshold of PM 2.5 is crossed. Currently hard-coded for Unhealth for Sensitive Groups level
  35.5 mg / m2 per [US EPA as of 2/2024](https://www.epa.gov/system/files/documents/2024-02/pm-naaqs-air-quality-index-fact-sheet.pdf)
@@ -14,4 +15,6 @@ Using an Arduino (or presumably other microcontroller tools),this turns on an LE
 [Using pm25_env per this forum thread ](https://forum.arduino.cc/t/abnormal-sensor-readings-from-a-pm2-5-sensor-by-plantower-solved/1277321/2)
 
 If you want to log data to a file, run the following python script (set up file name in script otherwise it uses airquality.log)
-```python3 airQualityReadingsToSerialPort.py
+```python
+python3 airQualityReadingsToSerialPort.py
+```
