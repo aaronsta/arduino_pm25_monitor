@@ -38,13 +38,7 @@ void setup() {
 }
 
 void loop() {
-/*
-digitalWrite(LED_BUILTIN, HIGH);  // turn the LED on (HIGH is the voltage level)
-  delay(3000);                      // wait for a second
-  digitalWrite(LED_BUILTIN, LOW);   // turn the LED off by making the voltage LOW
-  delay(3000);                      // wait for a second
 
-*/
   PM25_AQI_Data data;
   
   if (! aqi.read(&data)) {
