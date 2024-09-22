@@ -54,14 +54,19 @@ digitalWrite(LED_BUILTIN, HIGH);  // turn the LED on (HIGH is the voltage level)
   }
 
 
-  if(data.pm25_env > 35.5){//Unhealthy for Sensitive Groups level per https://en.wikipedia.org/wiki/Air_quality_index
+  if(data.pm25_env >= 35.5){//Unhealthy for Sensitive Groups level per https://en.wikipedia.org/wiki/Air_quality_index
     digitalWrite(LED_BUILTIN, HIGH);  // turn the LED on (HIGH is the voltage level)
     Serial.print("AQI: Unhealthy for Sensitive Groups. PM2.5: ");
     Serial.println(data.pm25_env);
   }
+  else if(data.pm25_env > 9 && data.pm25_env < 35.5){
+    digitalWrite(LED_BUILTIN, HIGH);  // turn the LED on (HIGH is the voltage level)
+    Serial.print("AQI: Moderate. PM2.5: ");
+    Serial.println(data.pm25_env);
+  }
   else{
       digitalWrite(LED_BUILTIN, LOW);   // turn the LED off by making the voltage LOW
-       Serial.print("AQI: Moderate or lower. PM 2.5: ");
+       Serial.print("AQI: Good. PM 2.5: ");
        Serial.println(data.pm25_env);
   }
   
