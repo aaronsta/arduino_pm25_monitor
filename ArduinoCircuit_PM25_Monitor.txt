@@ -1,0 +1,18 @@
+I2C Connections (PM 2.5 Sensor)
+QWIIC yellow line (SCK) - A5 (Arduino SCL)
+QWIIC blue line (SDI) - A4 (Arduino SDA)
+QWIIC black line - GND
+QWIIC red line - power (3.3V)
+
+TFT Monitor Connections
+using EYESPI connection
+VIN to VIN
+3.3V to LIT
+GND to GND
+RST to D9
+TDC to D8
+TCS to D10
+MOSI to D11
+SCK to D13
+
+see pm25_arduino_tft.jpg for one implementation
