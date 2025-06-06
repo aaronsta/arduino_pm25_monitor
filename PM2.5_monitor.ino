@@ -84,7 +84,7 @@ void loop() {
     return;
   }
 
-
+ //levels per https://www.epa.gov/system/files/documents/2024-02/pm-naaqs-air-quality-index-fact-sheet.pdf
   if(data.pm25_env >= 35.5){//Unhealthy for Sensitive Groups level per https://en.wikipedia.org/wiki/Air_quality_index
   if(hasLED){
     digitalWrite(LED_BUILTIN, HIGH);  // turn the LED on (HIGH is the voltage level)
