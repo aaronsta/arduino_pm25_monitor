@@ -85,7 +85,47 @@ void loop() {
   }
 
  //levels per https://www.epa.gov/system/files/documents/2024-02/pm-naaqs-air-quality-index-fact-sheet.pdf
-  if(data.pm25_env >= 35.5){//Unhealthy for Sensitive Groups level per https://en.wikipedia.org/wiki/Air_quality_index
+
+if(data.pm25_env >= 225.4){//Hazardous level per https://en.wikipedia.org/wiki/Air_quality_index
+  if(hasLED){
+    digitalWrite(LED_BUILTIN, HIGH);  // turn the LED on (HIGH is the voltage level)
+   }
+    Serial.print("AQI: Hazardous. PM2.5: ");
+    Serial.println(data.pm25_env);
+    tft.setTextColor(color_red);
+    tft.setCursor(0, 0);
+    tft.print("Unhealthy: ");
+    tft.print(data.pm25_env);
+    delay(2000);
+    tft.fillScreen(background_color);
+  }  
+else if(data.pm25_env >= 125.5){//Very Unhealthy level per https://en.wikipedia.org/wiki/Air_quality_index
+  if(hasLED){
+    digitalWrite(LED_BUILTIN, HIGH);  // turn the LED on (HIGH is the voltage level)
+   }
+    Serial.print("AQI: Very Unhealthy. PM2.5: ");
+    Serial.println(data.pm25_env);
+    tft.setTextColor(color_red);
+    tft.setCursor(0, 0);
+    tft.print("Unhealthy: ");
+    tft.print(data.pm25_env);
+    delay(2000);
+    tft.fillScreen(background_color);
+  }  
+else if(data.pm25_env >= 55.5){//Unhealthy level per https://en.wikipedia.org/wiki/Air_quality_index
+  if(hasLED){
+    digitalWrite(LED_BUILTIN, HIGH);  // turn the LED on (HIGH is the voltage level)
+   }
+    Serial.print("AQI: Unhealthy. PM2.5: ");
+    Serial.println(data.pm25_env);
+    tft.setTextColor(color_red);
+    tft.setCursor(0, 0);
+    tft.print("Unhealthy: ");
+    tft.print(data.pm25_env);
+    delay(2000);
+    tft.fillScreen(background_color);
+  }
+  else if(data.pm25_env >= 35.5 && data.pm25_env < 55.5){//Unhealthy for Sensitive Groups level per https://en.wikipedia.org/wiki/Air_quality_index
   if(hasLED){
     digitalWrite(LED_BUILTIN, HIGH);  // turn the LED on (HIGH is the voltage level)
    }
